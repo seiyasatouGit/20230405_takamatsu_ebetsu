@@ -94,7 +94,7 @@
 #tg02:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg02:checked ~ #ura__blue {
+#tg02:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 #tg03:checked ~ #omote {
@@ -106,13 +106,13 @@
 #tg04:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg04:checked ~ #ura__blue {
+#tg04:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 #tg05:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg05:checked ~ #ura__brown {
+#tg05:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 #tg06:checked ~ #omote {
@@ -124,7 +124,7 @@
 #tg07:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg07:checked ~ #ura__brown {
+#tg07:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 #tg08:checked ~ #omote {
