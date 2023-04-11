@@ -53,9 +53,9 @@
                 </div>
 
                 <div class="call_to_action">
-                    <a href="http://wp8th-ebetsu-takamatsu.local/">
+                    <a href="http://wp8th-ebetsu-takamatsu.local/top">
                         <div class="call_to_action__box">
-                            <p class="call_to_action__text">TOPに戻る</p>
+                            <p class="call_to_action__text">カードをシャッフルする</p>
                         </div>
                     </a>
                 </div>

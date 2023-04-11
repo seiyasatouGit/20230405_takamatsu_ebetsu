@@ -1,0 +1,16 @@
+// @use 'sass:meta';
+@import 'common';
+@import "mixin";
+
+/**
+* 編集画面用CSS
+*/
+@import "variables";
+// for gutenberg
+
+.editor-styles-wrapper{
+    @import "common";
+    // ↓ 編集画面でのみ効かせたいCSS
+
+    // ↑ 編集画面でのみ効かせたいCSS
+}

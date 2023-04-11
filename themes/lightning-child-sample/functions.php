@@ -44,3 +44,5 @@ if ( $my_lightning_additional_css ) {
 /************************************************
  * 独自の処理を必要に応じて書き足します
  */
+
+define('WP_SCSS_ALWAYS_RECOMPILE', true);
