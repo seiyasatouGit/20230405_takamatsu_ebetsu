@@ -101,6 +101,8 @@
 .page-wrap {
     display: flex;
     justify-content: center;
+    background-image: url(./img/secoma_ice.jpg);
+    background-size: 100vw 100vh;
     @include mq(tab) {
         display: initial;
     }
@@ -124,19 +126,19 @@
 }
 
 .card-wrap__top {
-    max-width: 1400px;
-    width: 90%;
+    // max-width: 1400px;
+    width: 100%;
     margin: 112px auto 0;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 56px;
-    column-gap: 56px;
+    row-gap: 90px;
+    column-gap: 24px;
     justify-content: space-around;
 }
 
 /* 下層ページのcss */
 .section-card {
-    width: 100%;
+    max-width: 1160px;
     margin: 48px auto 240px;
     padding: 0;
     display: flex;
