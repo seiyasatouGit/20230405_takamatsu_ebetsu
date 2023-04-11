@@ -14,29 +14,30 @@
   justify-content: center;
   align-items: center;
   border-radius: 16px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 }
 .mainSection-title, h2 {
   border: none;
 }
 .section-headline__text {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Noto Sans JP";
   color: black;
-  font-size: 56px;
+  font-size: 32px;
   font-weight: bold;
   margin: inherit;
   padding: 16px 24px;
 }
 /* CTAボタン */
 .call_to_action {
-  margin: 120px auto;
+  margin: 80px auto 140px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .call_to_action__box {
-  background-color: yellow;
+  background-color: #F7CB07;
   color: black;
+  font-family: "Noto Sans JP";
   font-size: 32px;
   font-weight: bold;
   text-align: center;
@@ -44,7 +45,7 @@
   align-items: center;
   width: 400px;
   border-radius: 8px;
-  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 }
 .call_to_action__text {
   margin: auto auto;
@@ -137,8 +138,6 @@
 .page-wrap {
   display: flex;
   justify-content: center;
-  background-image: url(./img/secoma_ice.jpg);
-  background-size: 100vw 100vh;
 }
 @media screen and (max-width: 1024px) {
   .page-wrap {
@@ -177,33 +176,38 @@
 }
 /* 下層ページのcss */
 .section-card {
+  background-image: url(../img/p0119.png) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
   max-width: 1160px;
-  margin: 48px auto 240px;
+  margin: 42px auto 0;
   padding: 0;
   display: flex;
   flex-flow: column;
   align-items: center;
 }
 .card-wrap {
-  max-width: 1500px;
-  width: 90%;
-  margin: 112px auto 0;
+  max-width: 1160px;
+  width: 100%;
+  margin: 42px auto 0;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+  column-gap: 36px;
 }
 .card-outside {
   display: flex;
-  max-width: 600px;
-  aspect-ratio: 0.75;
-  border-radius: 16px;
+  max-width: 544px;
+  aspect-ratio: 0.7;
+  border-color: #707070;
+  border: 1px solid;
+  border-radius: 26px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
 }
 .card-outside__ebetsu {
-  background-color: brown;
+  background-color: #A2482B;
 }
 .card-outside__takamatsu {
-  background-color: blue;
+  background-color: #1767AC;
 }
 .card-imginfo {
   display: flex;
@@ -213,6 +217,12 @@
   background-color: white;
   border-radius: 16px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.card-imginfo__ebetsu {
+  background-color: #F6F3EB;
+}
+.card-imginfo__takamatsu {
+  background-color: #E9F0F9;
 }
 .card-box {
   max-width: 600px;
@@ -237,7 +247,8 @@
   font-size: 36px;
   font-weight: bold;
   margin: 0 auto;
-  padding-top: 24px;
+  padding-top: 44px;
+  line-height: 0.84;
 }
 .card-content__text {
   font-size: 16px;

@@ -17,15 +17,15 @@
     justify-content: center;
     align-items: center;
     border-radius: 16px;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 }
 .mainSection-title,h2 {
     border: none;
 }
 .section-headline__text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: $sans;
     color: black;
-    font-size: 56px;
+    font-size: 32px;
     font-weight: bold;
     margin: inherit;
     padding: 16px 24px;
@@ -33,15 +33,16 @@
 
 /* CTAボタン */
 .call_to_action {
-    margin: 120px auto;
+    margin: 80px auto 140px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .call_to_action__box {
-    background-color: yellow;
+    background-color: #F7CB07;
     color: black;
+    font-family: $sans;
     font-size: 32px;
     font-weight: bold;
     text-align: center;
@@ -49,7 +50,7 @@
     align-items: center;
     width: 400px;
     border-radius: 8px;
-    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 }
 
 .call_to_action__text {
