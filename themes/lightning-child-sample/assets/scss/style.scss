@@ -1,0 +1,153 @@
+@use "variables" as *;
+@use "common";
+@use "mixin" as *;
+
+.page-wrap {
+    display: flex;
+    justify-content: center;
+    @include mq(tab) {
+        display: initial;
+    }
+}
+
+.section {
+    padding: 344px 0 224px 0;
+    display: flex;
+    flex-flow: column;
+    @include mq(tab) {
+        width: 100vw;
+        padding-right: 51px;
+        padding-left: 51px;
+        padding-top: 216px;
+        padding-bottom: 56px;
+    }
+    @include mq(sp) {
+        width: 100vw;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 120px;
+        padding-bottom: 56px;
+    }
+    }
+
+.section-headline {
+    text-align: center;
+    font-family: $serif;
+    color: $main;
+    font-size: 56px;
+    font-weight: bold;
+    @include mq(tab) {
+        font-size: 28px;
+    }
+}
+
+/* コース一覧ページ */
+.section-course {
+    width: 100%;
+    margin: 0 auto;
+    padding: 344px 0 224px;
+    display: flex;
+    flex-flow: column;
+    @include mq(tab) {
+        width: 100%;
+        padding: 120px 0 56px;
+    }
+    @include mq(sp) {
+        width: 100%;
+        padding: 120px 20px 56px;
+    }
+}
+.course {
+    &-wrap {
+        max-width: 1500px;
+        width: 90%;
+        // width: 100%;
+        margin: 112px auto 0;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 112px;
+            @include mq(tab) {
+            margin: 28px auto 0;
+            row-gap: 28px;
+            width: 80%;
+            }
+        @include mq(sp) {
+        margin: 56px auto 0;
+        width: 100%;
+        }
+    }
+    &-imginfo {
+        display: flex;
+        width: 100%;
+
+        @include mq(tab) {
+        }
+        @include mq(sp) {
+        display: block;
+        height: 100%;
+        }
+    }
+    &-box {
+        max-width: 600px;
+        width: 40%;
+        aspect-ratio: 1.33;
+        @include mq(tab) {
+        width: 30%;
+        aspect-ratio: 1;
+        }
+        @include mq(sp) {
+        width: 100%;
+        aspect-ratio: 1.33;
+        }
+        &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 8px 0 0 8px;
+        @include mq(tab) {
+            width: 100%;
+        }
+        @include mq(sp) {
+            width: 100%;
+            margin-bottom: 20.5px;
+            border-radius: 8px 8px 0 0;
+        }
+        }
+    }
+
+    &-content {
+        display: flex;
+        flex-flow: column;
+        margin: auto 0;
+        padding: 0 48px;
+        width: 60%;
+        @include mq(tab) {
+        width: 70%;
+        padding: 0 20px;
+        }
+        @include mq(sp) {
+        width: initial;
+        }
+        &__title {
+        font-family: $serif;
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 24px;
+        @include mq(tab) {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+        }
+        &__text {
+            font-family: $serif;
+            font-size: 16px;
+            line-height: 2;
+                @include mq(tab) {
+                    line-height: 1.5;
+                }
+            @include mq(sp) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

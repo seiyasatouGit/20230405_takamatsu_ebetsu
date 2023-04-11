@@ -1,0 +1,28 @@
+@use 'sass:meta';
+@use 'common' as *;
+@use "mixin" as *;
+
+/**
+* 編集画面用CSS
+*/
+@use "variables" as *;
+// for gutenberg
+.section-headline {
+    text-align: center;
+    // font-family: $serif;
+    // color: $main;
+    width: 320px;
+    font-size: 56px;
+    font-weight: bold;
+    color: blue($color: #e04949);
+    @include mq(tab) {
+        font-size: 28px;
+    }
+}
+
+.editor-styles-wrapper{
+    @import "common";
+    // ↓ 編集画面でのみ効かせたいCSS
+
+    // ↑ 編集画面でのみ効かせたいCSS
+}
