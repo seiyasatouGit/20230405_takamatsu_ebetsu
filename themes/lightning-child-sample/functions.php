@@ -12,7 +12,7 @@
  */
 
 // 独自のCSSファイル（assets/css/）を読み込む場合は true に変更してください.
-$my_lightning_additional_css = false;
+$my_lightning_additional_css = true;
 
 if ( $my_lightning_additional_css ) {
 	// 公開画面側のCSSの読み込み.
@@ -44,3 +44,5 @@ if ( $my_lightning_additional_css ) {
 /************************************************
  * 独自の処理を必要に応じて書き足します
  */
+
+define('WP_SCSS_ALWAYS_RECOMPILE', true);
