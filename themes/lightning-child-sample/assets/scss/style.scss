@@ -1,7 +1,103 @@
 @import "variables";
 @import "common";
 @import "mixin";
+@import "modules";
 
+/* カードめくり */
+.card{
+    position:relative;
+    perspective:500px;
+}
+.fuda{
+    position:absolute;
+    display:inline-block;
+    transition:2s;
+    backface-visibility:hidden;
+    border-radius:15px;
+}
+.csize{
+    width:240px;
+    height: 320px;
+}
+.omote{
+    transform:rotateY(180deg);
+    background:white;
+    border:2px solid black;
+    padding:0.6em;
+}
+#ura__blue{
+    transform:rotateY(0deg);
+    background:blue;
+    border:10px double black;
+    background-image:linear-gradient(45deg,#ffffff00 50%,#ffffff80 50%);
+    background-size:20px 20px;
+}
+#ura__brown{
+    transform:rotateY(0deg);
+    background:brown;
+    border:10px double black;
+    background-image:linear-gradient(45deg,#ffffff00 50%,#ffffff80 50%);
+    background-size:20px 20px;
+}
+#tg01:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg01:checked~#ura__blue{
+    transform:rotateY(-180deg);
+}
+    
+#tg02:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg02:checked~#ura__blue{
+    transform:rotateY(-180deg);
+}
+    
+#tg03:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg03:checked~#ura__blue{
+    transform:rotateY(-180deg);
+}
+    
+#tg04:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg04:checked~#ura__blue{
+    transform:rotateY(-180deg);
+}
+    
+#tg05:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg05:checked~#ura__brown{
+    transform:rotateY(-180deg);
+}
+    
+#tg06:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg06:checked~#ura__brown{
+    transform:rotateY(-180deg);
+}
+    
+#tg07:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg07:checked~#ura__brown{
+    transform:rotateY(-180deg);
+}
+    
+#tg08:checked~#omote{
+    transform:rotateY(0deg);
+}
+#tg08:checked~#ura__brown{
+    transform:rotateY(-180deg);
+}
+
+
+
+/* トップページのcss */
 .page-wrap {
     display: flex;
     justify-content: center;
@@ -9,11 +105,8 @@
         display: initial;
     }
 }
-
 .section {
-    padding: 344px 0 224px 0;
     display: flex;
-    flex-flow: column;
     @include mq(tab) {
         width: 100vw;
         padding-right: 51px;
@@ -28,126 +121,89 @@
         padding-top: 120px;
         padding-bottom: 56px;
     }
-    }
-
-.section-headline {
-    text-align: center;
-    font-family: $serif;
-    color: $main;
-    font-size: 56px;
-    font-weight: bold;
-    @include mq(tab) {
-        font-size: 28px;
-    }
 }
 
-/* コース一覧ページ */
-.section-course {
+.card-wrap__top {
+    max-width: 1400px;
+    width: 90%;
+    margin: 112px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 56px;
+    column-gap: 56px;
+    justify-content: space-around;
+}
+
+/* 下層ページのcss */
+.section-card {
     width: 100%;
-    margin: 0 auto;
-    padding: 344px 0 224px;
+    margin: 48px auto 240px;
+    padding: 0;
     display: flex;
     flex-flow: column;
-    @include mq(tab) {
-        width: 100%;
-        padding: 120px 0 56px;
+    align-items: center;
+}
+
+.card-wrap {
+    max-width: 1500px;
+    width: 90%;
+    margin: 112px auto 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // column-gap: 112px;
+}
+.card-outside{
+    display: flex;
+    max-width: 600px;
+    aspect-ratio: 0.75;
+    border-radius: 16px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+    &__ebetsu {
+        background-color: brown;
     }
-    @include mq(sp) {
-        width: 100%;
-        padding: 120px 20px 56px;
+    &__takamatsu {
+        background-color: blue;
     }
 }
-.course {
-    &-wrap {
-        max-width: 1500px;
+
+.card-imginfo {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    margin: 24px auto;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.card-box {
+    max-width: 600px;
+    aspect-ratio: 1.33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__img {
         width: 90%;
-        // width: 100%;
-        margin: 112px auto 0;
-        display: flex;
-        flex-wrap: wrap;
-        row-gap: 112px;
-            @include mq(tab) {
-            margin: 28px auto 0;
-            row-gap: 28px;
-            width: 80%;
-            }
-        @include mq(sp) {
-        margin: 56px auto 0;
-        width: 100%;
-        }
-    }
-    &-imginfo {
-        display: flex;
-        width: 100%;
-
-        @include mq(tab) {
-        }
-        @include mq(sp) {
-        display: block;
-        height: 100%;
-        }
-    }
-    &-box {
-        max-width: 600px;
-        width: 40%;
         aspect-ratio: 1.33;
-        @include mq(tab) {
-        width: 30%;
-        aspect-ratio: 1;
-        }
-        @include mq(sp) {
-        width: 100%;
-        aspect-ratio: 1.33;
-        }
-        &__img {
-        width: 100%;
-        height: 100%;
         object-fit: cover;
-        border-radius: 8px 0 0 8px;
-        @include mq(tab) {
-            width: 100%;
-        }
-        @include mq(sp) {
-            width: 100%;
-            margin-bottom: 20.5px;
-            border-radius: 8px 8px 0 0;
-        }
-        }
-    }
-
-    &-content {
-        display: flex;
-        flex-flow: column;
-        margin: auto 0;
-        padding: 0 48px;
-        width: 60%;
-        @include mq(tab) {
-        width: 70%;
-        padding: 0 20px;
-        }
-        @include mq(sp) {
-        width: initial;
-        }
-        &__title {
-        font-family: $serif;
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 24px;
-        @include mq(tab) {
-            font-size: 20px;
-            margin-bottom: 8px;
-        }
-        }
-        &__text {
-            font-family: $serif;
-            font-size: 16px;
-            line-height: 2;
-                @include mq(tab) {
-                    line-height: 1.5;
-                }
-            @include mq(sp) {
-                margin-bottom: 20px;
-            }
-        }
     }
 }
+
+.card-content {
+    display: flex;
+    flex-flow: column;
+    margin: auto 0;
+    padding: 0 48px;
+    width: 100%;
+    &__title {
+        font-size: 36px;
+        font-weight: bold;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 2;
+    }
+}
+

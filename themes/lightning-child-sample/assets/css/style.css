@@ -1,1 +1,245 @@
-.page-wrap{display:flex;justify-content:center}@media screen and (max-width:1024px){.page-wrap{display:initial}}.section{padding:344px 0 224px 0;display:flex;flex-flow:column}@media screen and (max-width:1024px){.section{width:100vw;padding-right:51px;padding-left:51px;padding-top:216px;padding-bottom:56px}}@media screen and (max-width:599px){.section{width:100vw;padding-right:20px;padding-left:20px;padding-top:120px;padding-bottom:56px}}.section-headline{text-align:center;font-family:"Noto Serif JP";color:#9E60A7;font-size:56px;font-weight:bold}@media screen and (max-width:1024px){.section-headline{font-size:28px}}.section-course{width:100%;margin:0 auto;padding:344px 0 224px;display:flex;flex-flow:column}@media screen and (max-width:1024px){.section-course{width:100%;padding:120px 0 56px}}@media screen and (max-width:599px){.section-course{width:100%;padding:120px 20px 56px}}.course-wrap{max-width:1500px;width:90%;margin:112px auto 0;display:flex;flex-wrap:wrap;row-gap:112px}@media screen and (max-width:1024px){.course-wrap{margin:28px auto 0;row-gap:28px;width:80%}}@media screen and (max-width:599px){.course-wrap{margin:56px auto 0;width:100%}}.course-imginfo{display:flex;width:100%}@media screen and (max-width:599px){.course-imginfo{display:block;height:100%}}.course-box{max-width:600px;width:40%;aspect-ratio:1.33}@media screen and (max-width:1024px){.course-box{width:30%;aspect-ratio:1}}@media screen and (max-width:599px){.course-box{width:100%;aspect-ratio:1.33}}.course-box__img{width:100%;height:100%;object-fit:cover;border-radius:8px 0 0 8px}@media screen and (max-width:1024px){.course-box__img{width:100%}}@media screen and (max-width:599px){.course-box__img{width:100%;margin-bottom:20.5px;border-radius:8px 8px 0 0}}.course-content{display:flex;flex-flow:column;margin:auto 0;padding:0 48px;width:60%}@media screen and (max-width:1024px){.course-content{width:70%;padding:0 20px}}@media screen and (max-width:599px){.course-content{width:initial}}.course-content__title{font-family:"Noto Serif JP";font-size:24px;font-weight:bold;margin-bottom:24px}@media screen and (max-width:1024px){.course-content__title{font-size:20px;margin-bottom:8px}}.course-content__text{font-family:"Noto Serif JP";font-size:16px;line-height:2}@media screen and (max-width:1024px){.course-content__text{line-height:1.5}}@media screen and (max-width:599px){.course-content__text{margin-bottom:20px}}/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+.section-headline__toptext {
+  font-family: "Noto Sans JP";
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  margin: inherit;
+  padding: 16px 24px;
+}
+.section-headline {
+  display: flex;
+  background-color: white;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.mainSection-title, h2 {
+  border: none;
+}
+.section-headline__text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: black;
+  font-size: 56px;
+  font-weight: bold;
+  margin: inherit;
+  padding: 16px 24px;
+}
+/* CTAボタン */
+.call_to_action {
+  margin: 120px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.call_to_action__box {
+  background-color: yellow;
+  color: black;
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.call_to_action__text {
+  margin: auto auto;
+}
+/* カードめくり */
+.card {
+  position: relative;
+  perspective: 500px;
+}
+.fuda {
+  position: absolute;
+  display: inline-block;
+  transition: 2s;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+.csize {
+  width: 240px;
+  height: 320px;
+}
+.omote {
+  transform: rotateY(180deg);
+  background: white;
+  border: 2px solid black;
+  padding: 0.6em;
+}
+#ura__blue {
+  transform: rotateY(0deg);
+  background: blue;
+  border: 10px double black;
+  background-image: linear-gradient(45deg, #ffffff00 50%, #ffffff80 50%);
+  background-size: 20px 20px;
+}
+#ura__brown {
+  transform: rotateY(0deg);
+  background: brown;
+  border: 10px double black;
+  background-image: linear-gradient(45deg, #ffffff00 50%, #ffffff80 50%);
+  background-size: 20px 20px;
+}
+#tg01:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg01:checked ~ #ura__blue {
+  transform: rotateY(-180deg);
+}
+#tg02:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg02:checked ~ #ura__blue {
+  transform: rotateY(-180deg);
+}
+#tg03:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg03:checked ~ #ura__blue {
+  transform: rotateY(-180deg);
+}
+#tg04:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg04:checked ~ #ura__blue {
+  transform: rotateY(-180deg);
+}
+#tg05:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg05:checked ~ #ura__brown {
+  transform: rotateY(-180deg);
+}
+#tg06:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg06:checked ~ #ura__brown {
+  transform: rotateY(-180deg);
+}
+#tg07:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg07:checked ~ #ura__brown {
+  transform: rotateY(-180deg);
+}
+#tg08:checked ~ #omote {
+  transform: rotateY(0deg);
+}
+#tg08:checked ~ #ura__brown {
+  transform: rotateY(-180deg);
+}
+/* トップページのcss */
+.page-wrap {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  .page-wrap {
+    display: initial;
+  }
+}
+.section {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    width: 100vw;
+    padding-right: 51px;
+    padding-left: 51px;
+    padding-top: 216px;
+    padding-bottom: 56px;
+  }
+}
+@media screen and (max-width: 599px) {
+  .section {
+    width: 100vw;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 120px;
+    padding-bottom: 56px;
+  }
+}
+.card-wrap__top {
+  max-width: 1400px;
+  width: 90%;
+  margin: 112px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 56px;
+  column-gap: 56px;
+  justify-content: space-around;
+}
+/* 下層ページのcss */
+.section-card {
+  width: 100%;
+  margin: 48px auto 240px;
+  padding: 0;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+.card-wrap {
+  max-width: 1500px;
+  width: 90%;
+  margin: 112px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.card-outside {
+  display: flex;
+  max-width: 600px;
+  aspect-ratio: 0.75;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.card-outside__ebetsu {
+  background-color: brown;
+}
+.card-outside__takamatsu {
+  background-color: blue;
+}
+.card-imginfo {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 24px auto;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+}
+.card-box {
+  max-width: 600px;
+  aspect-ratio: 1.33;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card-box__img {
+  width: 90%;
+  aspect-ratio: 1.33;
+  object-fit: cover;
+}
+.card-content {
+  display: flex;
+  flex-flow: column;
+  margin: auto 0;
+  padding: 0 48px;
+  width: 100%;
+}
+.card-content__title {
+  font-size: 36px;
+  font-weight: bold;
+  margin: 0 auto;
+  padding-top: 24px;
+}
+.card-content__text {
+  font-size: 16px;
+  line-height: 2;
+}
+/*# sourceMappingURL=style.css.map */

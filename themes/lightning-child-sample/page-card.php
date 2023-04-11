@@ -6,7 +6,7 @@
                     <h2 class="section-headline__text" >ネタのお題</h2>
                 </div>
                 <div class="card-wrap">
-                    <article class="card-outside__ebetsu">
+                    <article class="card-outside card-outside__ebetsu">
                         <div class="card-imginfo">
                             <h4 class="card-content__title">江別市</h4>
                             <div class="card-box">
@@ -20,7 +20,7 @@
                         </div>
                     </article>
 
-                    <article class="card-outside__takamatsu">
+                    <article class="card-outside card-outside__takamatsu">
                         <div class="card-imginfo">
                             <h4 class="card-content__title">高松市</h4>
                             <div class="card-box">
