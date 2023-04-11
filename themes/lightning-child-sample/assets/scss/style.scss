@@ -1,6 +1,6 @@
-@use "variables" as *;
-@use "common";
-@use "mixin" as *;
+@import "variables";
+@import "common";
+@import "mixin";
 
 .page-wrap {
     display: flex;

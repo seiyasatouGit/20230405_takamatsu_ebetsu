@@ -8,7 +8,7 @@
     <div class="page-wrap">
         <div class="section-course">
             <div>
-                <h2 class="section-headline" >コース一覧</h2>
+                <h2 class="section-headline" >コース一覧です</h2>
             </div>
             <div class="course-wrap">
                 <article class="shadow radius">

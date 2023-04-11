@@ -1,24 +1,12 @@
-@use 'sass:meta';
-@use 'common' as *;
-@use "mixin" as *;
+// @use 'sass:meta';
+@import 'common';
+@import "mixin";
 
 /**
 * 編集画面用CSS
 */
-@use "variables" as *;
+@import "variables";
 // for gutenberg
-.section-headline {
-    text-align: center;
-    // font-family: $serif;
-    // color: $main;
-    width: 320px;
-    font-size: 56px;
-    font-weight: bold;
-    color: blue($color: #e04949);
-    @include mq(tab) {
-        font-size: 28px;
-    }
-}
 
 .editor-styles-wrapper{
     @import "common";
