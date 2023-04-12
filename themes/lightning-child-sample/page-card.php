@@ -8,11 +8,13 @@
                 <div class="card-wrap">
                     <article class="card-outside card-outside__ebetsu">
                         <div class="card-imginfo card-imginfo__ebetsu">
-                            <h4 class="card-content__title">江別市</h4>
-                            <div class="card-box">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/classic_ogp2.jpg" alt="" class="card-box__img">
+                            <div class="card-title">
+                                <h4 class="card-title__text"> 江別市</h4>
                             </div>
                             <div class="card-content">
+                                <div class="card-content__box">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/classic_ogp2.jpg" alt="" class="card-box__img">
+                                </div>
                                 <p class="card-content__text">
                                     江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市
                                 </p>
@@ -22,11 +24,13 @@
 
                     <article class="card-outside card-outside__takamatsu">
                         <div class="card-imginfo card-imginfo__takamatsu">
-                            <h4 class="card-content__title">高松市</h4>
-                            <div class="card-box">
-                            <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sanukibeer.jpg" alt="" class="card-box__img">
+                            <div class="card-title">
+                                <h4 class="card-title__text">高松市</h4>
                             </div>
                             <div class="card-content">
+                                <div class="card-content__box">
+                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sanukibeer.jpg" alt="" class="card-box__img">
+                                </div>
                                 <p class="card-content__text">
                                     高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市
                                 </p>

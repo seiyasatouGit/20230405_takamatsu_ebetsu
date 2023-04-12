@@ -1,15 +1,5 @@
 @import "variables";
 
-
-.section-headline__toptext {
-    font-family: $sans;
-    color: black;
-    font-size: 16px;
-    font-weight: bold;
-    margin: inherit;
-    padding: 16px 24px;
-}
-
 .section-headline {
     display: flex;
     background-color: white;
@@ -18,18 +8,37 @@
     align-items: center;
     border-radius: 16px;
     box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+    @include mq(sp) {
+        border-radius: 8px;
+        box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+    &__toptext {
+        font-family: $sans;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        margin: inherit;
+        padding: 16px 24px;
+    }
+    &__text {
+        font-family: $sans;
+        color: #736E6E;
+        font-size: 32px;
+        font-weight: bold;
+        margin: inherit;
+        padding: 16px 24px;
+        @include mq(sp) {
+            font-size: 21px;
+            line-height: 1;
+            margin: inherit;
+            padding: 11px 24px;
+        }
+    }
 }
 .mainSection-title,h2 {
     border: none;
 }
-.section-headline__text {
-    font-family: $sans;
-    color: black;
-    font-size: 32px;
-    font-weight: bold;
-    margin: inherit;
-    padding: 16px 24px;
-}
+
 
 /* CTAボタン */
 .call_to_action {
@@ -37,22 +46,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    @include mq(sp) {
+        margin: 50px auto 214px;
+    }
+    &__box {
+        background-color: #F7CB07;
+        color: black;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 480px;
+        height: 96px;
+        border-radius: 8px;
+        box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
 
-.call_to_action__box {
-    background-color: #F7CB07;
-    color: black;
-    font-family: $sans;
-    font-size: 32px;
-    font-weight: bold;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 400px;
-    border-radius: 8px;
-    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
-}
-
-.call_to_action__text {
-    margin: auto auto;
+        @include mq(sp) {
+            width: 220px;
+            height: 46px;
+            border-radius: 32px;
+        }
+    }
+    &__text {
+        margin: auto auto;
+        font-family: $sans;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 3;
+        @include mq(sp) {
+            font-size: 21px;
+            line-height: 2;
+        }
+    }
 }
