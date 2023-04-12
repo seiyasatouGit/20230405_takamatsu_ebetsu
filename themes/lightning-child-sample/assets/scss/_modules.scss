@@ -1,5 +1,29 @@
 @import "variables";
 
+.section-topheadline {
+    display: flex;
+    background-color: white;
+    max-width: 1160px;
+    width: 100%;
+
+    align-items: center;
+    border-radius: 16px;
+    box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+    @include mq(sp) {
+        border-radius: 8px;
+        box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+    }
+    &__text {
+        font-family: $sans;
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        justify-content: start;
+        text-align: left;
+        margin: inherit;
+        padding: 16px 24px;
+    }
+}
 .section-headline {
     display: flex;
     background-color: white;
@@ -11,14 +35,6 @@
     @include mq(sp) {
         border-radius: 8px;
         box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
-    }
-    &__toptext {
-        font-family: $sans;
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        margin: inherit;
-        padding: 16px 24px;
     }
     &__text {
         font-family: $sans;
@@ -40,7 +56,7 @@
 }
 
 
-/* CTAボタン */
+/* TOｐに戻るボタン */
 .call_to_action {
     margin: 80px auto 140px;
     display: flex;
@@ -72,6 +88,45 @@
         font-size: 32px;
         font-weight: bold;
         line-height: 3;
+        @include mq(sp) {
+            font-size: 21px;
+            line-height: 2;
+        }
+    }
+}
+
+/* 配りなおすボタン */
+.shuffle {
+    margin: 68px auto 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mq(sp) {
+        margin: 50px auto 214px;
+    }
+    &__box {
+        background-color: #F7CB07;
+        color: black;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 336px;
+        height: 74px;
+        border-radius: 16px;
+        box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+
+        @include mq(sp) {
+            width: 220px;
+            height: 46px;
+            border-radius: 32px;
+        }
+    }
+    &__text {
+        margin: auto auto;
+        font-family: $sans;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 2;
         @include mq(sp) {
             font-size: 21px;
             line-height: 2;

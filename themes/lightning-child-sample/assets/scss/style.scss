@@ -16,8 +16,8 @@
     border-radius:15px;
 }
 .csize{
-    width:240px;
-    height: 320px;
+    width: 216px;
+    height: 312px;
 }
 .omote{
     transform:rotateY(180deg);
@@ -130,11 +130,11 @@
 .card-wrap__top {
     // max-width: 1400px;
     width: 100%;
-    margin: 112px auto 0;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    row-gap: 90px;
-    column-gap: 24px;
+    row-gap: 32px;
+    column-gap: 90px;
     justify-content: space-around;
 }
 

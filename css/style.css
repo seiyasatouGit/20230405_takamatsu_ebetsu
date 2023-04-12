@@ -1,4 +1,30 @@
 @charset "UTF-8";
+.section-topheadline {
+  display: flex;
+  background-color: white;
+  max-width: 1160px;
+  width: 100%;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+}
+@media screen and (max-width:599px) {
+  .section-topheadline {
+    border-radius: 8px;
+    box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+  }
+}
+.section-topheadline__text {
+  font-family: "Noto Sans JP";
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  justify-content: start;
+  text-align: left;
+  margin: inherit;
+  padding: 16px 24px;
+}
+
 .section-headline {
   display: flex;
   background-color: white;
@@ -13,14 +39,6 @@
     border-radius: 8px;
     box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
   }
-}
-.section-headline__toptext {
-  font-family: "Noto Sans JP";
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  margin: inherit;
-  padding: 16px 24px;
 }
 .section-headline__text {
   font-family: "Noto Sans JP";
@@ -43,12 +61,17 @@
   border: none;
 }
 
-/* CTAボタン */
+/* TOｐに戻るボタン */
 .call_to_action {
   margin: 80px auto 140px;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width:599px) {
+  .call_to_action {
+    margin: 50px auto 214px;
+  }
 }
 .call_to_action__box {
   background-color: #F7CB07;
@@ -64,6 +87,8 @@
 @media screen and (max-width:599px) {
   .call_to_action__box {
     width: 220px;
+    height: 46px;
+    border-radius: 32px;
   }
 }
 .call_to_action__text {
@@ -72,6 +97,56 @@
   font-size: 32px;
   font-weight: bold;
   line-height: 3;
+}
+@media screen and (max-width:599px) {
+  .call_to_action__text {
+    font-size: 21px;
+    line-height: 2;
+  }
+}
+
+/* 配りなおすボタン */
+.shuffle {
+  margin: 68px auto 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width:599px) {
+  .shuffle {
+    margin: 50px auto 214px;
+  }
+}
+.shuffle__box {
+  background-color: #F7CB07;
+  color: black;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 336px;
+  height: 74px;
+  border-radius: 16px;
+  box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
+}
+@media screen and (max-width:599px) {
+  .shuffle__box {
+    width: 220px;
+    height: 46px;
+    border-radius: 32px;
+  }
+}
+.shuffle__text {
+  margin: auto auto;
+  font-family: "Noto Sans JP";
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 3;
+}
+@media screen and (max-width:599px) {
+  .shuffle__text {
+    font-size: 21px;
+    line-height: 2;
+  }
 }
 
 /* カードめくり */
@@ -90,8 +165,8 @@
 }
 
 .csize {
-  width: 240px;
-  height: 320px;
+  width: 216px;
+  height: 312px;
 }
 
 .omote {
@@ -218,12 +293,12 @@
 
 .card-wrap__top {
   width: 100%;
-  margin: 112px auto 0;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 90px;
-  -moz-column-gap: 24px;
-       column-gap: 24px;
+  row-gap: 32px;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
   justify-content: space-around;
 }
 
