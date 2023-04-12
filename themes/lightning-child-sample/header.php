@@ -31,7 +31,7 @@ if ( function_exists( 'wp_body_open' ) ) {
     <section class="header_wrapper">
     <img class="header_kai"src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_kai.svg">
     <a class="header_link" href="/top/">
-     <img class="header_logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_logo.svg">
+        <img class="header_logo" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_logo.svg">
     </a>
     <img class="header_wa"src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_wa.svg">
 

@@ -28,7 +28,6 @@
                     }; ?> -->
 
                     <?php endwhile; endif; ?>
-                   
 
                 </div>
 

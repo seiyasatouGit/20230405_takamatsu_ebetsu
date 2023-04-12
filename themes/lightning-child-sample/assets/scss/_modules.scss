@@ -10,8 +10,11 @@
     border-radius: 16px;
     box-shadow: 10px 10px 6px 0px rgba(0, 0, 0, 0.16);
     @include mq(sp) {
+        width: 300px;
+        // height: 72px;
         border-radius: 8px;
         box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+        margin-bottom: 28px;
     }
     &__text {
         font-family: $sans;
@@ -22,6 +25,11 @@
         text-align: left;
         margin: inherit;
         padding: 16px 24px;
+        @include mq(sp) {
+            font-size: 12px;
+            padding: 8px 8px;
+            margin: 0;
+        }
     }
 }
 .section-headline {
@@ -102,7 +110,7 @@
     justify-content: center;
     align-items: center;
     @include mq(sp) {
-        margin: 50px auto 214px;
+        margin: 33px auto 40px;
     }
     &__box {
         background-color: #F7CB07;
@@ -128,8 +136,8 @@
         font-weight: bold;
         line-height: 2;
         @include mq(sp) {
-            font-size: 21px;
-            line-height: 2;
+            font-size: 18px;
+            line-height: 2.5;
         }
     }
 }
