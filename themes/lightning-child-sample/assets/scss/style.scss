@@ -3,6 +3,18 @@
 @import "mixin";
 @import "modules";
 
+
+/* ヘッダー関係 */
+
+.header_wrapper{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+.header_logo{
+    height: 100%;
+}
+
 /* カードめくり */
 .card{
     position:relative;
@@ -16,28 +28,26 @@
     border-radius:15px;
 }
 .csize{
-    width:240px;
-    height: 320px;
+    width:216px;
+    height: 304px;
 }
 .omote{
     transform:rotateY(180deg);
     background:white;
-    border:2px solid black;
-    padding:0.6em;
+    border:14px solid #1767AC;
+    padding:0.1em;
 }
 #ura__blue{
     transform:rotateY(0deg);
-    background:blue;
-    border:10px double black;
-    background-image:linear-gradient(45deg,#ffffff00 50%,#ffffff80 50%);
-    background-size:20px 20px;
+    background: url(../img/card_blue.png);
+    border:none;
+    // background: size 216px 304px;
 }
 #ura__brown{
     transform:rotateY(0deg);
-    background:brown;
-    border:10px double black;
-    background-image:linear-gradient(45deg,#ffffff00 50%,#ffffff80 50%);
-    background-size:20px 20px;
+    background: url(../img/card_brown.png);
+    border:none;
+    // background: size 216px 304px;
 }
 #tg01:checked~#omote{
     transform:rotateY(0deg);
@@ -97,73 +107,84 @@
 
 
 
+
 /* トップページのcss */
 .page-wrap {
     display: flex;
     justify-content: center;
-    @include mq(tab) {
-        display: initial;
-    }
-}
-.section {
-    display: flex;
-    @include mq(tab) {
-        width: 100vw;
-        padding-right: 51px;
-        padding-left: 51px;
-        padding-top: 216px;
-        padding-bottom: 56px;
-    }
+    align-items: center;
+    width: 100vw;
+    background: url(../img/p0119.png);
+    background-size: cover;
     @include mq(sp) {
+        display: flex;
         width: 100vw;
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 120px;
-        padding-bottom: 56px;
+        background: url(../img/p0119.png);
+        background-size: cover;
     }
 }
-
-.card-wrap__top {
-    max-width: 1400px;
-    width: 90%;
-    margin: 112px auto 0;
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 56px;
-    column-gap: 56px;
-    justify-content: space-around;
-}
-
-/* 下層ページのcss */
 .section-card {
-    width: 100%;
-    margin: 48px auto 240px;
+    display: flex;
+    max-width: 1160px;
+    margin: 42px auto 0;
     padding: 0;
     display: flex;
     flex-flow: column;
     align-items: center;
+    @include mq(sp) {
+        width: 100vw;
+        margin-top: 14px;
+        padding: 0 20px 56px;
+    }
 }
 
-.card-wrap {
-    max-width: 1500px;
-    width: 90%;
-    margin: 112px auto 0;
+.card-wrap__top {
+    // max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    row-gap: 32px;
+    column-gap: 90px;
     justify-content: space-around;
-    // column-gap: 112px;
+}
+
+/* 下層ページのcss */
+
+.card-wrap {
+    max-width: 1160px;
+    width: 100%;
+    margin: 42px auto 0;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 36px;
+    @include mq(sp) {
+        display: block;
+        width: 100%;
+        align-items: center;
+        margin-top: 0;
+        padding-top: 35px;
+    }
 }
 .card-outside{
     display: flex;
-    max-width: 600px;
-    aspect-ratio: 0.75;
-    border-radius: 16px;
+    max-width: 544px;
+    aspect-ratio: 0.712;
+    border-color: #707070;
+    border: 1px solid;
+    border-radius: 26px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
+    @include mq(sp) {
+        display: block;
+        width: 100%;
+        margin: 0 auto 24px;
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.16);
+    }
     &__ebetsu {
-        background-color: brown;
+        background-color: $brown;
     }
     &__takamatsu {
-        background-color: blue;
+        background-color: $blue;
     }
 }
 
@@ -172,38 +193,68 @@
     flex-flow: column;
     width: 90%;
     margin: 24px auto;
-    background-color: white;
     border-radius: 16px;
     box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.35);
-}
-.card-box {
-    max-width: 600px;
-    aspect-ratio: 1.33;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    &__img {
-        width: 90%;
-        aspect-ratio: 1.33;
-        object-fit: cover;
+    @include mq(sp) {
+        display: block;
+        border-radius: 14;
+        height: 96%;
+    }
+    &__ebetsu {
+        background-color: #F6F3EB;
+    }
+    &__takamatsu {
+        background-color: #E9F0F9
     }
 }
+.card-title {
+    text-align: center;
+    padding-top: 44px;
+    @include mq(sp) {
+        padding-top: 26px;
+    }
+    &__text {
+        font-size: 36px;
+        font-weight: bold;
+        margin: inherit;
+        @include mq(sp) {
+            font-size: 20px;
+        }
+    }
+}   
 
 .card-content {
     display: flex;
     flex-flow: column;
-    margin: auto 0;
-    padding: 0 48px;
-    width: 100%;
-    &__title {
-        font-size: 36px;
-        font-weight: bold;
-        margin: 0 auto;
-        padding-top: 24px;
+    // padding: 0 48px;
+    width: 85%;
+    margin: 0 auto;
+    &__box {
+        max-width: 600px;
+        aspect-ratio: 1.33;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__img {
+            width: 90%;
+            aspect-ratio: 1.33;
+            object-fit: cover;
+            @include mq(sp) {
+                width: 75%;
+                aspect-ratio: 1.33;
+                object-fit: cover;
+            }
+        }
     }
     &__text {
         font-size: 16px;
         line-height: 2;
+        margin-top: 10px;
+        @include mq(sp) {
+            font-size: 12px;
+            line-height: 2.5;
+            margin-top: 18px;
+        }
     }
 }
 
