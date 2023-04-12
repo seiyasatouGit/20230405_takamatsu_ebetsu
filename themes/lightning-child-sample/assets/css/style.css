@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.header_wrapper{
+  height: 80px;
+  display: flex;
+  justify-content: center;
+
+}
+.header_logo{
+  height: 100%;
+}
+
 .section-headline__toptext {
   font-family: "Noto Sans JP";
   color: black;
