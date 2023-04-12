@@ -36,4 +36,6 @@ if ( function_exists( 'wp_body_open' ) ) {
     <img class="header_wa"src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/header_wa.svg">
 
 </section>
+
 </header>
+
