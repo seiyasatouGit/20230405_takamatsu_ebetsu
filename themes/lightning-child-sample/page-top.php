@@ -1,54 +1,32 @@
 <?php get_header(); ?>
-    <section>
-        <div class="page-wrap">
+    <section class="row">
+        <div class="page-wrap col-12">
             <div class="section-card">
-
                 <div class="card-wrap__top">
                     <div class="section-topheadline">
                         <h4 class="section-topheadline__text" >カードをクリックするとネタのお題が出るよ。オンラインで話すときにお役に立ててね。</h2>
                     </div>
+                <?php $count_card = 1; ?>
+                <?php $card_face = "ura__blue"; ?>
+                <?php query_posts(array('orderby' => 'rand', 'showposts' => 8));
+                    if (have_posts()) :
+                    while (have_posts()) : the_post(); ?>
+            
                     <div class="card csize">
-                        <input id="tg01" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg01">めくると出てくる文章</label>
-                        <label id="ura__blue" class="fuda csize" for="tg01"></label>
+                        <input id="tg0<?= $count_card?>" style="display: none;" type="checkbox" />
+                        <label id="omote" class="fuda csize omote" for="tg0<?= $count_card?>"><?php the_title(); ?>
+                        <a class="more_button" href="<?php the_permalink() ?>">詳しく見る</a></label>
+                        <label id=<?= $card_face ?> class="fuda csize" for="tg0<?= $count_card?>"></label>
                     </div>
-                    <div class="card csize">
-                        <input id="tg02" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg02">めくると出てくる文章</label>
-                        <label id="ura__blue" class="fuda csize" for="tg02"></label>
-                    </div>
-                    <div class="card csize">
-                        <input id="tg03" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg03">めくると出てくる文章</label>
-                        <label id="ura__blue" class="fuda csize" for="tg03"></label>
-                    </div>
-                    <div class="card csize">
-                        <input id="tg04" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg04">めくると出てくる文章</label>
-                        <label id="ura__blue" class="fuda csize" for="tg04"></label>
-                    </div>
+                    <?php $count_card+=1; ?>
+                    <!-- <?php if($card_face == "ura__blue"){
+                        $card_face = "ura__brown";
+                    }else{
+                        $card_face = "ura__blue";
+                    }; ?> -->
 
-                    <div class="card csize">
-                        <input id="tg05" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg05">めくると出てくる文章</label>
-                        <label id="ura__brown" class="fuda csize" for="tg05"></label>
-                    </div>
-                    <div class="card csize">
-                        <input id="tg06" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg06">めくると出てくる文章</label>
-                        <label id="ura__brown" class="fuda csize" for="tg06"></label>
-                    </div>
-                    <div class="card csize">
-                        <input id="tg07" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg07">めくると出てくる文章</label>
-                        <label id="ura__brown" class="fuda csize" for="tg07"></label>
-                    </div>
-                    <div class="card csize">
-                        <input id="tg08" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg08">めくると出てくる文章</label>
-                        <label id="ura__brown" class="fuda csize" for="tg08"></label>
-                    </div>
-
+                    <?php endwhile; endif; ?>
+                   
 
                 </div>
 
@@ -62,4 +40,10 @@
             </div>
         </div>
     </section>
+
+
+
+
+
+
 <?php get_footer(); ?>

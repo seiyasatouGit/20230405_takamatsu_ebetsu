@@ -140,13 +140,24 @@
   font-family: "Noto Sans JP";
   font-size: 32px;
   font-weight: bold;
-  line-height: 3;
+  line-height: 2;
 }
 @media screen and (max-width:599px) {
   .shuffle__text {
     font-size: 21px;
     line-height: 2;
   }
+}
+
+/* ヘッダー関係 */
+.header_wrapper {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+
+.header_logo {
+  height: 100%;
 }
 
 /* カードめくり */
@@ -166,30 +177,26 @@
 
 .csize {
   width: 216px;
-  height: 312px;
+  height: 304px;
 }
 
 .omote {
   transform: rotateY(180deg);
   background: white;
-  border: 2px solid black;
-  padding: 0.6em;
+  border: 14px solid #1767AC;
+  padding: 0.1em;
 }
 
 #ura__blue {
   transform: rotateY(0deg);
-  background: blue;
-  border: 10px double black;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5019607843) 50%);
-  background-size: 20px 20px;
+  background: url(../img/card_blue.png);
+  border: none;
 }
 
 #ura__brown {
   transform: rotateY(0deg);
-  background: brown;
-  border: 10px double black;
-  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.5019607843) 50%);
-  background-size: 20px 20px;
+  background: url(../img/card_brown.png);
+  border: none;
 }
 
 #tg01:checked ~ #omote {
@@ -204,7 +211,7 @@
   transform: rotateY(0deg);
 }
 
-#tg02:checked ~ #ura__blue {
+#tg02:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 
@@ -220,7 +227,7 @@
   transform: rotateY(0deg);
 }
 
-#tg04:checked ~ #ura__blue {
+#tg04:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 
@@ -228,7 +235,7 @@
   transform: rotateY(0deg);
 }
 
-#tg05:checked ~ #ura__brown {
+#tg05:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 
@@ -244,7 +251,7 @@
   transform: rotateY(0deg);
 }
 
-#tg07:checked ~ #ura__brown {
+#tg07:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 

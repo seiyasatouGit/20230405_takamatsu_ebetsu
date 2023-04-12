@@ -1,6 +1,15 @@
+<?php 
+/*
+Template Name: 下層ページ
+Template Post Type: page
+*/
+?>
+
+
+
 <?php get_header(); ?>
-    <section>
-        <div class="page-wrap">
+    <section class="row">
+        <div class="page-wrap col-12">
             <div class="section-card">
                 <div class="section-headline">
                     <h2 class="section-headline__text" >ネタのお題</h2>
@@ -39,7 +48,7 @@
                     </article>
                 </div>
                 <div class="call_to_action">
-                    <a href="http://wp8th-ebetsu-takamatsu.local/">
+                    <a href="http://wp8th-ebetsu-takamatsu.local/top">
                         <div class="call_to_action__box">
                             <p class="call_to_action__text">TOPに戻る</p>
                         </div>

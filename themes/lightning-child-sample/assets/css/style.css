@@ -144,6 +144,15 @@
     line-height: 2;
   }
 }
+/* ヘッダー関係 */
+.header_wrapper {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+}
+.header_logo {
+  height: 100%;
+}
 /* カードめくり */
 .card {
   position: relative;
@@ -158,27 +167,23 @@
 }
 .csize {
   width: 216px;
-  height: 312px;
+  height: 304px;
 }
 .omote {
   transform: rotateY(180deg);
   background: white;
-  border: 2px solid black;
-  padding: 0.6em;
+  border: 14px solid #1767AC;
+  padding: 0.1em;
 }
 #ura__blue {
   transform: rotateY(0deg);
-  background: blue;
-  border: 10px double black;
-  background-image: linear-gradient(45deg, #ffffff00 50%, #ffffff80 50%);
-  background-size: 20px 20px;
+  background: url(../img/card_blue.png);
+  border: none;
 }
 #ura__brown {
   transform: rotateY(0deg);
-  background: brown;
-  border: 10px double black;
-  background-image: linear-gradient(45deg, #ffffff00 50%, #ffffff80 50%);
-  background-size: 20px 20px;
+  background: url(../img/card_brown.png);
+  border: none;
 }
 #tg01:checked ~ #omote {
   transform: rotateY(0deg);
@@ -189,7 +194,7 @@
 #tg02:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg02:checked ~ #ura__blue {
+#tg02:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 #tg03:checked ~ #omote {
@@ -201,13 +206,13 @@
 #tg04:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg04:checked ~ #ura__blue {
+#tg04:checked ~ #ura__brown {
   transform: rotateY(-180deg);
 }
 #tg05:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg05:checked ~ #ura__brown {
+#tg05:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 #tg06:checked ~ #omote {
@@ -219,7 +224,7 @@
 #tg07:checked ~ #omote {
   transform: rotateY(0deg);
 }
-#tg07:checked ~ #ura__brown {
+#tg07:checked ~ #ura__blue {
   transform: rotateY(-180deg);
 }
 #tg08:checked ~ #omote {
