@@ -30,6 +30,10 @@
 .csize{
     width:216px;
     height: 304px;
+    @include mq(sp) {
+        width: 146px;
+        height: 210px;
+    }
 }
 .omote{
     transform:rotateY(180deg);
@@ -41,13 +45,13 @@
     transform:rotateY(0deg);
     background: url(../img/card_blue.png);
     border:none;
-    // background: size 216px 304px;
+    background-size: cover;
 }
 #ura__brown{
     transform:rotateY(0deg);
     background: url(../img/card_brown.png);
     border:none;
-    // background: size 216px 304px;
+    background-size: cover;
 }
 #tg01:checked~#omote{
     transform:rotateY(0deg);
@@ -147,6 +151,12 @@
     row-gap: 32px;
     column-gap: 90px;
     justify-content: space-around;
+    @include mq(sp) {
+        width: 100%;
+        row-gap: 28px;
+        column-gap: 52px;
+        margin-top: 21px;
+    }
 }
 
 /* 下層ページのcss */

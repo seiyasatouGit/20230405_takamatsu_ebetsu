@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 .section-topheadline {
   display: flex;
   background-color: white;
@@ -11,23 +10,13 @@
 }
 @media screen and (max-width: 599px) {
   .section-topheadline {
+    width: 300px;
     border-radius: 8px;
     box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+    margin-bottom: 28px;
   }
 }
-
-.header_wrapper{
-  height: 80px;
-  display: flex;
-  justify-content: center;
-
-}
-.header_logo{
-  height: 100%;
-}
-
-.section-headline__toptext {
-
+.section-topheadline__text {
   font-family: "Noto Sans JP";
   color: black;
   font-size: 16px;
@@ -36,6 +25,13 @@
   text-align: left;
   margin: inherit;
   padding: 16px 24px;
+}
+@media screen and (max-width: 599px) {
+  .section-topheadline__text {
+    font-size: 12px;
+    padding: 8px 8px;
+    margin: 0;
+  }
 }
 .section-headline {
   display: flex;
@@ -123,7 +119,7 @@
 }
 @media screen and (max-width: 599px) {
   .shuffle {
-    margin: 50px auto 214px;
+    margin: 33px auto 40px;
   }
 }
 .shuffle__box {
@@ -153,8 +149,8 @@
 }
 @media screen and (max-width: 599px) {
   .shuffle__text {
-    font-size: 21px;
-    line-height: 2;
+    font-size: 18px;
+    line-height: 2.5;
   }
 }
 /* ヘッダー関係 */
@@ -182,6 +178,12 @@
   width: 216px;
   height: 304px;
 }
+@media screen and (max-width: 599px) {
+  .csize {
+    width: 146px;
+    height: 210px;
+  }
+}
 .omote {
   transform: rotateY(180deg);
   background: white;
@@ -192,11 +194,13 @@
   transform: rotateY(0deg);
   background: url(../img/card_blue.png);
   border: none;
+  background-size: cover;
 }
 #ura__brown {
   transform: rotateY(0deg);
   background: url(../img/card_brown.png);
   border: none;
+  background-size: cover;
 }
 #tg01:checked ~ #omote {
   transform: rotateY(0deg);
@@ -287,6 +291,14 @@
   row-gap: 32px;
   column-gap: 90px;
   justify-content: space-around;
+}
+@media screen and (max-width: 599px) {
+  .card-wrap__top {
+    width: 100%;
+    row-gap: 28px;
+    column-gap: 52px;
+    margin-top: 21px;
+  }
 }
 /* 下層ページのcss */
 .card-wrap {
