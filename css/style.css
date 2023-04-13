@@ -160,14 +160,16 @@
 
 /* 詳しく見るボタン */
 .more-btn {
-  margin: 80px auto 72px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 40px;
 }
 @media screen and (max-width:599px) {
   .more-btn {
-    margin: 33px auto 40px;
+    position: absolute;
+    bottom: 20px;
   }
 }
 .more-btn__box {
@@ -189,7 +191,7 @@
 }
 @media screen and (max-width:599px) {
   .more-btn__text {
-    font-size: 18px;
+    font-size: 10px;
     line-height: 2.5;
   }
 }
