@@ -158,6 +158,44 @@
   }
 }
 
+/* 詳しく見るボタン */
+.more-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 40px;
+}
+@media screen and (max-width:599px) {
+  .more-btn {
+    position: absolute;
+    bottom: 20px;
+  }
+}
+.more-btn__box {
+  background-color: #1767AC;
+  color: #FFFEFE;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 24px;
+  border-radius: 8px;
+}
+.more-btn__text {
+  margin: auto auto;
+  font-family: "Noto Sans JP";
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 2.5;
+}
+@media screen and (max-width:599px) {
+  .more-btn__text {
+    font-size: 10px;
+    line-height: 2.5;
+  }
+}
+
 /* ヘッダー関係 */
 .header_wrapper {
   height: 80px;
@@ -195,6 +233,11 @@
   }
 }
 
+.backboard {
+  background: inherit;
+  border: none;
+}
+
 .omote {
   transform: rotateY(180deg);
   background: white;
@@ -206,14 +249,14 @@
   transform: rotateY(0deg);
   background: url(../img/card_blue.png);
   border: none;
-  background-size: cover;
+  background-size: 108%;
 }
 
 #ura__brown {
   transform: rotateY(0deg);
   background: url(../img/card_brown.png);
   border: none;
-  background-size: cover;
+  background-size: 108%;
 }
 
 #tg01:checked ~ #omote {
@@ -278,6 +321,27 @@
 
 #tg08:checked ~ #ura__brown {
   transform: rotateY(-180deg);
+}
+
+.omote-content {
+  display: flex;
+  flex-flow: column;
+  margin-top: 96px;
+  align-items: center;
+  text-align: center;
+}
+@media screen and (max-width:599px) {
+  .omote-content {
+    margin-top: 40px;
+  }
+}
+.omote-content__title {
+  font-size: 24px;
+}
+@media screen and (max-width:599px) {
+  .omote-content__title {
+    font-size: 16px;
+  }
 }
 
 /* トップページのcss */

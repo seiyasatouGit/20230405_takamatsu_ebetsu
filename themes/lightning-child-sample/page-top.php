@@ -7,17 +7,28 @@
                     <div class="section-topheadline">
                         <h4 class="section-topheadline__text" >カードをクリックするとネタのお題が出るよ。オンラインで話すときにお役に立ててね。</h2>
                     </div>
-
                 <?php $count_card = 1; ?>
                 <?php $card_face = "ura__blue"; ?>
                 <?php query_posts(array('orderby' => 'rand', 'showposts' => 8));
                     if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
             
-                    <div class="card csize">
+                    <div class="card csize backboard">
                         <input id="tg0<?= $count_card?>" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg0<?= $count_card?>"><?php the_title(); ?>
-                        <a class="more_button" href="<?php the_permalink() ?>">詳しく見る</a></label>
+                        <label id="omote" class="fuda csize omote" for="tg0<?= $count_card?>">
+                            <div class="omote-content">
+                                <div class="omote-content__title">
+                                    <?php the_title(); ?>
+                                </div>
+                                <div class="more-btn">
+                                    <div class="more-btn__box">
+                                        <a href="<?php the_permalink() ?>">
+                                            <p class="more-btn__text">例を見てみる</p>
+                                        </a>
+                                    </div>
+                                </div> 
+                            </div>
+                        </label>
                         <label id=<?= $card_face ?> class="fuda csize" for="tg0<?= $count_card?>"></label>
                     </div>
                     <?php $count_card+=1; ?>

@@ -1,1 +1,0 @@
-<?php return array('dependencies' => array('wp-hooks', 'wp-media-utils', 'wp-polyfill', 'wp-url'), 'version' => '156ffe2e1e481c09c0bf3d0c60ef8884');

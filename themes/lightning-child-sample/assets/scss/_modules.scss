@@ -141,3 +141,44 @@
         }
     }
 }
+
+/* 詳しく見るボタン */
+.more-btn {
+    // margin: auto auto 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 40px;
+    @include mq(sp) {
+        // margin: auto auto 40px;
+        position: absolute;
+        bottom: 20px;
+    }
+    &__box {
+        background-color: #1767AC;
+        color: #FFFEFE;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+        height: 24px;
+        border-radius: 8px;
+        @include mq(sp) {
+            // width: 75px;
+            // height: px;
+            // border-radius: 32px;
+        }
+    }
+    &__text {
+        margin: auto auto;
+        font-family: $sans;
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 2.5;
+        @include mq(sp) {
+            font-size: 10px;
+            line-height: 2.5;
+        }
+    }
+}

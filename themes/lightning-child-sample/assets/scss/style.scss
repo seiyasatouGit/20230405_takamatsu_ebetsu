@@ -35,6 +35,10 @@
         height: 210px;
     }
 }
+.backboard {
+    background: inherit;
+    border: none;
+}
 .omote{
     transform:rotateY(180deg);
     background:white;
@@ -45,13 +49,13 @@
     transform:rotateY(0deg);
     background: url(../img/card_blue.png);
     border:none;
-    background-size: cover;
+    background-size: 108%;
 }
 #ura__brown{
     transform:rotateY(0deg);
     background: url(../img/card_brown.png);
     border:none;
-    background-size: cover;
+    background-size: 108%;
 }
 #tg01:checked~#omote{
     transform:rotateY(0deg);
@@ -109,7 +113,22 @@
     transform:rotateY(-180deg);
 }
 
-
+.omote-content {
+    display: flex;
+    flex-flow: column;
+    margin-top: 96px;
+    align-items: center;
+    text-align: center;
+    @include mq(sp) {
+        margin-top: 40px;
+    }
+    &__title {
+        font-size: 24px;
+        @include mq(sp) {
+            font-size: 16px;
+        }
+    }
+}
 
 
 /* トップページのcss */
