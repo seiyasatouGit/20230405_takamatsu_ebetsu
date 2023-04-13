@@ -5,14 +5,12 @@ Template Post Type: page
 */
 ?>
 
-
-
 <?php get_header(); ?>
     <section class="row">
         <div class="page-wrap col-12">
             <div class="section-card">
                 <div class="section-headline">
-                    <h2 class="section-headline__text" >ネタのお題</h2>
+                    <h2 class="section-headline__text" ><?php the_title(); ?></h2>
                 </div>
                 <div class="card-wrap">
                     <article class="card-outside card-outside__ebetsu">
@@ -22,26 +20,25 @@ Template Post Type: page
                             </div>
                             <div class="card-content">
                                 <div class="card-content__box">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/classic_ogp2.jpg" alt="" class="card-box__img">
+                                    <img src="<?php the_field('ebetsu_img'); ?>" alt="">
                                 </div>
                                 <p class="card-content__text">
-                                    江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市江別市
+                                    <?php the_field('ebetsu_text'); ?>
                                 </p>
                             </div>
                         </div>
                     </article>
-
                     <article class="card-outside card-outside__takamatsu">
-                        <div class="card-imginfo card-imginfo__takamatsu">
+                  <div class="card-imginfo card-imginfo__takamatsu">
                             <div class="card-title">
                                 <h4 class="card-title__text">高松市</h4>
                             </div>
                             <div class="card-content">
                                 <div class="card-content__box">
-                                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/sanukibeer.jpg" alt="" class="card-box__img">
+                                    <img src="<?php the_field('takamatsu_img'); ?>" alt="">
                                 </div>
                                 <p class="card-content__text">
-                                    高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市 高松市
+                                    <?php the_field('takamatsu_text'); ?>
                                 </p>
                             </div>
                         </div>
@@ -58,3 +55,5 @@ Template Post Type: page
         </div>
     </section>
 <?php get_footer(); ?>
+
+
