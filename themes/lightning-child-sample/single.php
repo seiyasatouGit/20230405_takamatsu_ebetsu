@@ -38,7 +38,7 @@
                     </article>
                 </div>
                 <div class="call_to_action">
-                    <a href="http://wp8th-ebetsu-takamatsu.local/top">
+                    <a href="/">
                         <div class="call_to_action__box">
                             <p class="call_to_action__text">TOPに戻る</p>
                         </div>

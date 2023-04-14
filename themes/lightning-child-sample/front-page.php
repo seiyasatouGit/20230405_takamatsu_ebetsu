@@ -43,7 +43,7 @@
                 </div>
 
                 <div class="shuffle">
-                    <a href="http://wp8th-ebetsu-takamatsu.local/top">
+                    <a href="/">
                         <div class="shuffle__box">
                             <p class="shuffle__text">カードを配りなおす</p>
 
