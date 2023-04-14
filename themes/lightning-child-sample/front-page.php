@@ -9,13 +9,15 @@
                     </div>
                 <?php $count_card = 1; ?>
                 <?php $card_face = "ura__blue"; ?>
+                <?php $omote = "omote__blue"; ?>
+
                 <?php query_posts(array('orderby' => 'rand', 'showposts' => 8));
                     if (have_posts()) :
                     while (have_posts()) : the_post(); ?>
             
                     <div class="card csize backboard">
                         <input id="tg0<?= $count_card?>" style="display: none;" type="checkbox" />
-                        <label id="omote" class="fuda csize omote" for="tg0<?= $count_card?>">
+                        <label id="omote" class="fuda csize <?=$omote ?>" for="tg0<?= $count_card?>">
                             <div class="omote-content">
                                 <div class="omote-content__title">
                                     <?php the_title(); ?>
@@ -32,11 +34,15 @@
                         <label id=<?= $card_face ?> class="fuda csize" for="tg0<?= $count_card?>"></label>
                     </div>
                     <?php $count_card+=1; ?>
-                    <!-- <?php if($card_face == "ura__blue"){
+                    <?php if($card_face == "ura__blue"){
                         $card_face = "ura__brown";
+                        $omote = "omote__brown";
+
                     }else{
                         $card_face = "ura__blue";
-                    }; ?> -->
+                        $omote = "omote__blue";
+
+                    }; ?> 
 
                     <?php endwhile; endif; ?>
 
