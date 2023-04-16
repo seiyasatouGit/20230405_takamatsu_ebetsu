@@ -47,6 +47,7 @@
   .section-headline {
     border-radius: 8px;
     box-shadow: 8px 6px 6px 0px rgba(0, 0, 0, 0.16);
+    margin-top: 10px;
   }
 }
 .section-headline__text {
@@ -70,7 +71,7 @@
   border: none;
 }
 
-/* TOｐに戻るボタン */
+/* TOPに戻るボタン */
 .call_to_action {
   margin: 80px auto 140px;
   display: flex;
@@ -159,7 +160,7 @@
 }
 
 /* 詳しく見るボタン */
-.more-btn {
+.morebtn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,13 +168,12 @@
   bottom: 40px;
 }
 @media screen and (max-width:599px) {
-  .more-btn {
+  .morebtn {
     position: absolute;
     bottom: 20px;
   }
 }
-.more-btn__box {
-  background-color: #1767AC;
+.morebtn-box {
   color: #FFFEFE;
   text-align: center;
   justify-content: center;
@@ -182,7 +182,13 @@
   height: 24px;
   border-radius: 8px;
 }
-.more-btn__text {
+.morebtn-box__blue {
+  background-color: #1767AC;
+}
+.morebtn-box__brown {
+  background-color: #a2482b;
+}
+.morebtn__text {
   margin: auto auto;
   font-family: "Noto Sans JP";
   font-size: 10px;
@@ -190,7 +196,7 @@
   line-height: 2.5;
 }
 @media screen and (max-width:599px) {
-  .more-btn__text {
+  .morebtn__text {
     font-size: 10px;
     line-height: 2.5;
   }
@@ -241,8 +247,13 @@
 .omote {
   transform: rotateY(180deg);
   background: white;
-  border: 14px solid #1767AC;
   padding: 0.1em;
+}
+.omote__blue {
+  border: 14px solid #1767AC;
+}
+.omote__brown {
+  border: 14px solid #a2482b;
 }
 
 #ura__blue {
@@ -393,8 +404,8 @@
   .card-wrap__top {
     width: 100%;
     row-gap: 28px;
-    -moz-column-gap: 52px;
-         column-gap: 52px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
     margin-top: 21px;
   }
 }
@@ -520,8 +531,12 @@
 @media screen and (max-width:599px) {
   .card-content__text {
     font-size: 12px;
-    line-height: 2.5;
+    line-height: 1.5;
     margin-top: 18px;
   }
+}
+
+a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

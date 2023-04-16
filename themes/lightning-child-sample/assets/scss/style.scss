@@ -42,9 +42,15 @@
 .omote{
     transform:rotateY(180deg);
     background:white;
-    border:14px solid #1767AC;
     padding:0.1em;
+    &__blue {
+        border:14px solid #1767AC;
+    }
+    &__brown {
+        border: 14px solid #a2482b;
+    }
 }
+
 #ura__blue{
     transform:rotateY(0deg);
     background: url(../img/card_blue.png);
@@ -173,7 +179,7 @@
     @include mq(sp) {
         width: 100%;
         row-gap: 28px;
-        column-gap: 52px;
+        column-gap: 40px;
         margin-top: 21px;
     }
 }
@@ -281,9 +287,12 @@
         margin-top: 10px;
         @include mq(sp) {
             font-size: 12px;
-            line-height: 2.5;
+            line-height: 1.5;
             margin-top: 18px;
         }
     }
 }
 
+a {
+    text-decoration: none;
+}
